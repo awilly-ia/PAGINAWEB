@@ -1,8 +1,12 @@
-/* Core structure reset and color variables */
+/* 1. Basic page setup */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -14,7 +18,31 @@ body {
     line-height: 1.7;
 }
 
-/* --- TRADITIONAL BRAND IDENTITY (MOBILE FIRST) --- */
+/* 2. Header and brand */
+.main-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5dfd5;
+}
+
+.header-top-bar {
+    background-color: #1a2721;
+    color: #ffffff;
+    text-align: center;
+    padding: 6px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.header-main-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+/* Brand logo and text */
 .brand-identity-container {
     display: flex !important;
     flex-direction: row !important;
@@ -27,7 +55,6 @@ body {
     /* Prevents shrinking on smaller screens */
 }
 
-/* Rigid layout rules to guarantee the crest stays beautifully visible */
 .brand-crest-wrapper {
     display: block;
     width: 80px;
@@ -43,7 +70,6 @@ body {
     object-fit: contain;
 }
 
-/* Stack arrangement to place the subtext right under the main title */
 .brand-typography-stack {
     display: flex;
     flex-direction: column;
@@ -72,8 +98,22 @@ body {
     color: #6e0f0f;
 }
 
+.brand-logo {
+    font-size: 2.2rem;
+    font-weight: 400;
+    letter-spacing: 5px;
+    text-decoration: none;
+    color: #1a2721;
+}
 
-/* Mandatory Elegant Hover Effects */
+/* Navigation links and icons */
+.main-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+}
+
 .main-nav a {
     text-decoration: none;
     color: #1a2721;
@@ -88,6 +128,14 @@ body {
     /* Antique gold highlight style */
 }
 
+.header-utility-icons {
+    display: flex;
+    gap: 20px;
+    font-size: 1.1rem;
+    color: #1a2721;
+}
+
+/* 3. Buttons and social links */
 .hero-action-button,
 .purchase-action-btn {
     display: inline-block;
@@ -120,53 +168,7 @@ body {
     color: #9c7a3c;
 }
 
-/* 1. Mobile First Layout Configuration (Pestañas de 0px a 480px) */
-.main-header {
-    background-color: #ffffff;
-    border-bottom: 1px solid #e5dfd5;
-}
-
-.header-top-bar {
-    background-color: #1a2721;
-    color: #ffffff;
-    text-align: center;
-    padding: 6px;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.header-main-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    padding: 20px;
-}
-
-.brand-logo {
-    font-size: 2.2rem;
-    font-weight: 400;
-    letter-spacing: 5px;
-    text-decoration: none;
-    color: #1a2721;
-}
-
-.main-nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 14px;
-}
-
-.header-utility-icons {
-    display: flex;
-    gap: 20px;
-    font-size: 1.1rem;
-    color: #1a2721;
-}
-
-/* Layout section lengths designed to cover 3 screens minimum */
+/* 4. Main content sections */
 .hero-banner,
 .heritage-section,
 .gallery-section,
@@ -181,6 +183,7 @@ body {
     text-align: center;
 }
 
+/* Hero section */
 .hero-banner {
     background-color: #f3ece1;
     /* Soft tint backdrop */
@@ -208,9 +211,11 @@ body {
     color: #555555;
 }
 
+/* Art and heritage section */
 .decorative-crest {
     font-size: 1.5rem;
     color: #9c7a3c;
+    /* Antique gold highlight style */
     margin-bottom: 15px;
 }
 
@@ -249,31 +254,7 @@ body {
     margin-bottom: 20px;
 }
 
-.price-amount {
-    font-size: 2.2rem;
-    color: #1a2721;
-    margin: 15px 0;
-}
-
-.premium-tier {
-    border: 1px solid #9c7a3c;
-    position: relative;
-}
-
-.tier-badge {
-    position: absolute;
-    top: -12px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #9c7a3c;
-    color: #ffffff;
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    padding: 2px 12px;
-    letter-spacing: 1px;
-}
-
-/* Fluid responsive perfume showcase gallery (1 Column default) */
+/* 5. Perfume collection gallery */
 .gallery-responsive-grid {
     display: flex;
     flex-direction: column;
@@ -301,100 +282,7 @@ body {
     font-size: 0.9rem;
 }
 
-.boutique-address-info p {
-    margin-bottom: 10px;
-}
-
-.announcement-side-panel {
-    background-color: #ffffff;
-    padding: 25px;
-    text-align: center;
-    border-top: 1px solid #e5dfd5;
-    border-bottom: 1px solid #e5dfd5;
-    font-style: italic;
-}
-
-.main-footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    background-color: #1a2721;
-    color: #ffffff;
-    padding: 40px 24px;
-    font-size: 0.85rem;
-}
-
-/* 2. Tablet Viewport Layout Configuration (Pestañas de 481px a 1024px) */
-@media (min-width: 481px) {
-    .header-main-body {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 15px 40px;
-    }
-
-    .main-nav {
-        flex-direction: row;
-        gap: 25px;
-    }
-
-    .features-flex-container,
-    .pricing-flex-container {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .heritage-card,
-    .price-tier-card {
-        flex: 1 1 43%;
-    }
-
-    /* Showcase grid layout for mid-size tabs (2 Columns) */
-    .gallery-responsive-grid {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-
-    .gallery-item-wrapper {
-        flex: 1 1 45%;
-    }
-
-    .main-footer {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 30px 40px;
-    }
-}
-
-/* 3. Desktop Viewport Layout Configuration (Pestañas de 1025px en adelante) */
-@media (min-width: 1025px) {
-    .main-content {
-        max-width: 1250px;
-        margin: 0 auto;
-    }
-
-    .heritage-card {
-        flex: 1;
-    }
-
-    .pricing-flex-container {
-        flex-wrap: nowrap;
-        max-width: 900px;
-        margin: 0 auto;
-    }
-
-    .price-tier-card {
-        flex: 1;
-    }
-
-    /* Showcase grid layout for expanded browser displays (4 Columns) */
-    .gallery-item-wrapper {
-        flex: 1 1 22%;
-    }
-}
-
-/* --- EXTRA SECTION: HISTORY STYLE (MOBILE FIRST) --- */
+/* 6. History section */
 .history-section {
     min-height: 95vh;
     padding: 80px 24px;
@@ -403,20 +291,6 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-}
-
-.decorative-crest {
-    font-size: 1.5rem;
-    color: #9c7a3c;
-    /* Antique gold highlight style */
-    margin-bottom: 15px;
-}
-
-.section-subtitle {
-    font-size: 1rem;
-    font-style: italic;
-    color: #666666;
-    margin-bottom: 50px;
 }
 
 .history-flex-container {
@@ -441,22 +315,34 @@ body {
     margin-bottom: 10px;
 }
 
-@media (min-width: 481px) {
-    .history-flex-container {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .history-timeline-card {
-        flex: 1 1 43%;
-    }
+/* 7. Prices and product cards */
+.price-amount {
+    font-size: 2.2rem;
+    color: #1a2721;
+    margin: 15px 0;
 }
 
-@media (min-width: 1025px) {
-    .history-timeline-card {
-        flex: 1;
-    }
+.premium-tier {
+    border: 1px solid #9c7a3c;
+    position: relative;
+}
+
+.tier-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #9c7a3c;
+    color: #ffffff;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    padding: 2px 12px;
+    letter-spacing: 1px;
+}
+
+/* 8. Contact section and form */
+.boutique-address-info p {
+    margin-bottom: 10px;
 }
 
 form {
@@ -531,11 +417,7 @@ form button[type="submit"]:hover {
     color: #1a2721;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
-/* --- EXTRA SECTIONS: LIST & TABLE STYLE (ENGLISH CODE) --- */
+/* 9. List and table sections */
 .notes-style-section,
 .specs-style-section {
     min-height: 80vh;
@@ -548,7 +430,7 @@ html {
     background-color: #faf8f5;
 }
 
-/* List Styling */
+/* List styles */
 .list-container {
     width: 100%;
     max-width: 700px;
@@ -562,7 +444,7 @@ html {
     font-family: 'Times New Roman', Georgia, serif;
     font-size: 1.2rem;
     color: #9c7a3c;
-    /* Tu color Oro */
+    /* color gold */
     font-weight: bold;
     margin-top: 15px;
     letter-spacing: 1px;
@@ -577,7 +459,7 @@ html {
     padding-bottom: 15px;
 }
 
-/* Table Styling */
+/* Table styles */
 .heritage-data-table {
     width: 100%;
     max-width: 800px;
@@ -597,7 +479,6 @@ html {
 
 .heritage-data-table th {
     background-color: #1a2721;
-    /* Tu color verde oscuro */
     color: #ffffff;
     padding: 15px;
     font-weight: 400;
@@ -615,7 +496,7 @@ html {
 
 .heritage-data-table tbody tr:hover {
     background-color: #faf8f5;
-    /* Efecto sutil al pasar el mouse */
+    /* Efect mouse */
 }
 
 .heritage-data-table tfoot td {
@@ -626,11 +507,121 @@ html {
     background-color: #faf8f5;
 }
 
-/* Ajuste Responsivo para la Tabla en pantallas pequeñas */
+/* 10. Sidebar and footer */
+.announcement-side-panel {
+    background-color: #ffffff;
+    padding: 25px;
+    text-align: center;
+    border-top: 1px solid #e5dfd5;
+    border-bottom: 1px solid #e5dfd5;
+    font-style: italic;
+}
+
+.main-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: #1a2721;
+    color: #ffffff;
+    padding: 40px 24px;
+    font-size: 0.85rem;
+}
+
+/* 11. Tablet layout (481px and wider) */
+@media (min-width: 481px) {
+    .header-main-body {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 15px 40px;
+    }
+
+    .main-nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 18px;
+        min-width: 0;
+    }
+
+    .main-nav a {
+        font-size: 0.8rem;
+        letter-spacing: 0.5px;
+    }
+
+    .features-flex-container,
+    .pricing-flex-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .heritage-card,
+    .price-tier-card {
+        flex: 1 1 43%;
+    }
+
+    .gallery-responsive-grid {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .gallery-item-wrapper {
+        flex: 1 1 45%;
+    }
+
+    .main-footer {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 30px 40px;
+    }
+
+    .history-flex-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .history-timeline-card {
+        flex: 1 1 43%;
+    }
+}
+
+/* 12. Desktop layout (1025px and wider) */
+@media (min-width: 1025px) {
+    .main-content {
+        max-width: 1250px;
+        margin: 0 auto;
+    }
+
+    .heritage-card {
+        flex: 1;
+    }
+
+    .pricing-flex-container {
+        flex-wrap: nowrap;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .price-tier-card {
+        flex: 1;
+    }
+
+    .gallery-item-wrapper {
+        flex: 1 1 22%;
+    }
+
+    .history-timeline-card {
+        flex: 1;
+    }
+}
+
+/* 13. Small screen table layout (600px and narrower) */
 @media (max-width: 600px) {
     .heritage-data-table {
         display: block;
         overflow-x: auto;
-        /* Permite scroll horizontal si no cabe en el móvil */
+        /* Allows horizontal scroll if the table does not fit */
     }
 }

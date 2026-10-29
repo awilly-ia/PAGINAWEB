@@ -1,0 +1,636 @@
+/* Core structure reset and color variables */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Times New Roman', Georgia, serif;
+    color: #24382a;
+    /* Deep British green-black tone */
+    background-color: #faf8f5;
+    /* Off-white heritage cream canvas */
+    line-height: 1.7;
+}
+
+/* --- TRADITIONAL BRAND IDENTITY (MOBILE FIRST) --- */
+.brand-identity-container {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 10px;
+    /* Spacing between the crest emblem and the text stack */
+    text-decoration: none;
+    color: #1a2721;
+    flex-shrink: 0;
+    /* Prevents shrinking on smaller screens */
+}
+
+/* Rigid layout rules to guarantee the crest stays beautifully visible */
+.brand-crest-wrapper {
+    display: block;
+    width: 80px;
+    /* Perfect base size for mobile tabs */
+    min-width: 80px;
+    /* Absolute defense against shrinking */
+}
+
+.brand-crest-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* Stack arrangement to place the subtext right under the main title */
+.brand-typography-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.brand-main-title {
+    font-family: 'Times New Roman', Georgia, serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    line-height: 1.1;
+    margin-bottom: 4px;
+    color: #9c9208;
+    /* Deep British green-black tone */
+    white-space: nowrap;
+    /* Prevents wrapping on smaller screens */
+}
+
+.brand-establishment-text {
+    font-family: 'Times New Roman', Georgia, serif;
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #6e0f0f;
+}
+
+
+/* Mandatory Elegant Hover Effects */
+.main-nav a {
+    text-decoration: none;
+    color: #1a2721;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.main-nav a:hover {
+    color: #9c7a3c;
+    /* Antique gold highlight style */
+}
+
+.hero-action-button,
+.purchase-action-btn {
+    display: inline-block;
+    background-color: #1a2721;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    padding: 12px 28px;
+    border: 1px solid #1a2721;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.hero-action-button:hover,
+.purchase-action-btn:hover {
+    background-color: transparent;
+    color: #1a2721;
+    transform: translateY(-2px);
+}
+
+.social-icon-anchor {
+    color: #ffffff;
+    font-size: 1.3rem;
+    transition: color 0.3s ease;
+}
+
+.social-icon-anchor:hover {
+    color: #9c7a3c;
+}
+
+/* 1. Mobile First Layout Configuration (Pestañas de 0px a 480px) */
+.main-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5dfd5;
+}
+
+.header-top-bar {
+    background-color: #1a2721;
+    color: #ffffff;
+    text-align: center;
+    padding: 6px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.header-main-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+.brand-logo {
+    font-size: 2.2rem;
+    font-weight: 400;
+    letter-spacing: 5px;
+    text-decoration: none;
+    color: #1a2721;
+}
+
+.main-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+}
+
+.header-utility-icons {
+    display: flex;
+    gap: 20px;
+    font-size: 1.1rem;
+    color: #1a2721;
+}
+
+/* Layout section lengths designed to cover 3 screens minimum */
+.hero-banner,
+.heritage-section,
+.gallery-section,
+.pricing-section,
+.boutique-contact-section {
+    min-height: 95vh;
+    padding: 80px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-banner {
+    background-color: #f3ece1;
+    /* Soft tint backdrop */
+    border-bottom: 1px solid #e5dfd5;
+}
+
+.hero-brand-subtitle {
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    color: #9c7a3c;
+    margin-bottom: 15px;
+}
+
+.hero-text-container h1 {
+    font-size: 2.8rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-description {
+    max-width: 500px;
+    margin: 0 auto 30px auto;
+    font-style: italic;
+    color: #555555;
+}
+
+.decorative-crest {
+    font-size: 1.5rem;
+    color: #9c7a3c;
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    font-size: 1rem;
+    font-style: italic;
+    color: #666666;
+    margin-bottom: 50px;
+}
+
+.features-flex-container,
+.pricing-flex-container {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    width: 100%;
+}
+
+.heritage-card,
+.price-tier-card {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border: 1px solid #e5dfd5;
+    outline: 1px solid transparent;
+    transition: outline 0.3s ease;
+}
+
+.heritage-card:hover,
+.price-tier-card:hover {
+    outline: 1px solid #9c7a3c;
+}
+
+.heritage-icon {
+    font-size: 2rem;
+    color: #9c7a3c;
+    margin-bottom: 20px;
+}
+
+.price-amount {
+    font-size: 2.2rem;
+    color: #1a2721;
+    margin: 15px 0;
+}
+
+.premium-tier {
+    border: 1px solid #9c7a3c;
+    position: relative;
+}
+
+.tier-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #9c7a3c;
+    color: #ffffff;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    padding: 2px 12px;
+    letter-spacing: 1px;
+}
+
+/* Fluid responsive perfume showcase gallery (1 Column default) */
+.gallery-responsive-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    width: 100%;
+}
+
+.gallery-item-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 15px;
+    border: 1px solid #e5dfd5;
+    transition: filter 0.4s ease;
+}
+
+.gallery-item-wrapper img:hover {
+    filter: sepia(30%);
+}
+
+.gallery-item-wrapper h4 {
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.boutique-address-info p {
+    margin-bottom: 10px;
+}
+
+.announcement-side-panel {
+    background-color: #ffffff;
+    padding: 25px;
+    text-align: center;
+    border-top: 1px solid #e5dfd5;
+    border-bottom: 1px solid #e5dfd5;
+    font-style: italic;
+}
+
+.main-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: #1a2721;
+    color: #ffffff;
+    padding: 40px 24px;
+    font-size: 0.85rem;
+}
+
+/* 2. Tablet Viewport Layout Configuration (Pestañas de 481px a 1024px) */
+@media (min-width: 481px) {
+    .header-main-body {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 15px 40px;
+    }
+
+    .main-nav {
+        flex-direction: row;
+        gap: 25px;
+    }
+
+    .features-flex-container,
+    .pricing-flex-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .heritage-card,
+    .price-tier-card {
+        flex: 1 1 43%;
+    }
+
+    /* Showcase grid layout for mid-size tabs (2 Columns) */
+    .gallery-responsive-grid {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .gallery-item-wrapper {
+        flex: 1 1 45%;
+    }
+
+    .main-footer {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 30px 40px;
+    }
+}
+
+/* 3. Desktop Viewport Layout Configuration (Pestañas de 1025px en adelante) */
+@media (min-width: 1025px) {
+    .main-content {
+        max-width: 1250px;
+        margin: 0 auto;
+    }
+
+    .heritage-card {
+        flex: 1;
+    }
+
+    .pricing-flex-container {
+        flex-wrap: nowrap;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .price-tier-card {
+        flex: 1;
+    }
+
+    /* Showcase grid layout for expanded browser displays (4 Columns) */
+    .gallery-item-wrapper {
+        flex: 1 1 22%;
+    }
+}
+
+/* --- EXTRA SECTION: HISTORY STYLE (MOBILE FIRST) --- */
+.history-section {
+    min-height: 95vh;
+    padding: 80px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.decorative-crest {
+    font-size: 1.5rem;
+    color: #9c7a3c;
+    /* Antique gold highlight style */
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    font-size: 1rem;
+    font-style: italic;
+    color: #666666;
+    margin-bottom: 50px;
+}
+
+.history-flex-container {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    width: 100%;
+}
+
+.history-timeline-card {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border: 1px solid #e5dfd5;
+    text-align: left;
+}
+
+.history-date {
+    display: block;
+    font-size: 1.5rem;
+    color: #9c7a3c;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+@media (min-width: 481px) {
+    .history-flex-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .history-timeline-card {
+        flex: 1 1 43%;
+    }
+}
+
+@media (min-width: 1025px) {
+    .history-timeline-card {
+        flex: 1;
+    }
+}
+
+form {
+    width: 100%;
+    max-width: 500px;
+    margin: 30px auto 0 auto;
+}
+
+fieldset {
+    border: 1px solid #e5dfd5;
+    padding: 30px;
+    background-color: #ffffff;
+    text-align: left;
+}
+
+legend {
+    font-family: 'Times New Roman', Georgia, serif;
+    padding: 0 10px;
+    color: #9c7a3c;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+form p {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+label {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #24382a;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e5dfd5;
+    background-color: #faf8f5;
+    font-family: inherit;
+    font-size: 1rem;
+    color: #24382a;
+    transition: border-color 0.3s ease, outline 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #9c7a3c;
+}
+
+form button[type="submit"] {
+    width: 100%;
+    background-color: #1a2721;
+    color: #ffffff;
+    border: 1px solid #1a2721;
+    padding: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+    background-color: transparent;
+    color: #1a2721;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* --- EXTRA SECTIONS: LIST & TABLE STYLE (ENGLISH CODE) --- */
+.notes-style-section,
+.specs-style-section {
+    min-height: 80vh;
+    padding: 80px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #faf8f5;
+}
+
+/* List Styling */
+.list-container {
+    width: 100%;
+    max-width: 700px;
+    text-align: left;
+    background: #ffffff;
+    padding: 40px;
+    border: 1px solid #e5dfd5;
+}
+
+.heritage-definition-list dt {
+    font-family: 'Times New Roman', Georgia, serif;
+    font-size: 1.2rem;
+    color: #9c7a3c;
+    /* Tu color Oro */
+    font-weight: bold;
+    margin-top: 15px;
+    letter-spacing: 1px;
+}
+
+.heritage-definition-list dd {
+    font-size: 0.95rem;
+    color: #555555;
+    margin-left: 0;
+    margin-bottom: 15px;
+    border-bottom: 1px dashed #e5dfd5;
+    padding-bottom: 15px;
+}
+
+/* Table Styling */
+.heritage-data-table {
+    width: 100%;
+    max-width: 800px;
+    border-collapse: collapse;
+    background: #ffffff;
+    font-family: 'Times New Roman', Georgia, serif;
+    margin-top: 20px;
+    border: 1px solid #e5dfd5;
+}
+
+.heritage-data-table caption {
+    font-style: italic;
+    color: #666666;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.heritage-data-table th {
+    background-color: #1a2721;
+    /* Tu color verde oscuro */
+    color: #ffffff;
+    padding: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+}
+
+.heritage-data-table td {
+    padding: 15px;
+    color: #24382a;
+    border-bottom: 1px solid #e5dfd5;
+    font-size: 0.95rem;
+}
+
+.heritage-data-table tbody tr:hover {
+    background-color: #faf8f5;
+    /* Efecto sutil al pasar el mouse */
+}
+
+.heritage-data-table tfoot td {
+    font-style: italic;
+    color: #777777;
+    font-size: 0.85rem;
+    text-align: center;
+    background-color: #faf8f5;
+}
+
+/* Ajuste Responsivo para la Tabla en pantallas pequeñas */
+@media (max-width: 600px) {
+    .heritage-data-table {
+        display: block;
+        overflow-x: auto;
+        /* Permite scroll horizontal si no cabe en el móvil */
+    }
+}
